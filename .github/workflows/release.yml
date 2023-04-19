@@ -29,28 +29,4 @@ jobs:
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build
-    - name: github-tag-release
-
-  # You may pin to the exact commit or the version.
-
-  # uses: janryWang/github-tag-release@7dbe52cf0967783d198faac8e4b85dc8609572f9
-
-      uses: janryWang/github-tag-release@v0.0.3
-
-      with:
-
-    # the GITHUB_TOKEN
-
-       github_token: ${{ secrets.GITHUB_TOKEN }}
-
-    # Changelog Max Items
-
-       changelog_limit: 50
-
-    # Release Note Title
-
-       release_title: auto release
- 
-    # Auto Commit Message
-
-       auto_commit_message: auto commit
+        
