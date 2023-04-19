@@ -29,4 +29,26 @@ jobs:
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build
-        
+    - name: Update Nightly Release
+
+      uses: andelf/nightly-release@main
+
+      env:
+
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      with:
+
+        tag_name: nightly
+
+        name: 'Desktop App Nightly Release $$'
+
+        prerelease: true
+
+        body: 'TODO: Add nightly release notes'
+
+        files: |
+
+          ./SHA256SUMS.txt
+
+          ./*.jar
